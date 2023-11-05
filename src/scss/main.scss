@@ -1,0 +1,35 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+// index-page
+@import "./components/header";
+@import "./components/modal";
+@import "./components/hero";
+@import "./components/info";
+@import "./components/about";
+@import "./components/why";
+@import "./components/choose";
+@import "./components/banner";
+@import "./components/who";
+@import "./components/footer";
+
+// about-page
+@import "./components/welcome";
+
+// how-page
+@import "./components/answers";
+@import "./components/serve";
+@import "./components/eligibility";
+@import "./components/waiver";
+@import "./components/how-why";
+
+// menu-page
+@import "./components/instructions";
+
+// contact-page
+@import "./components/contacts";
+@import "./components/start";

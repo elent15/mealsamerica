@@ -1,0 +1,86 @@
+.banner {
+  background-image: url(../images/banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 566px;
+
+    @media (max-width:1050px) {
+      min-height: 496px;
+    }
+
+    @media (max-width:820px) {
+      min-height: 450px;
+    }
+
+    @media (max-width:480px) {
+      min-height: 400px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 16px 30px 0;
+    max-width: 555px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: clamp(1.5rem, 1.125rem + 1.88vw, 3.375rem);
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--light);
+
+    @media (max-width:650px) {
+      margin-bottom: 32px;
+      line-height: 52px;
+    }
+  }
+
+  &__title-secondary {
+    color: var(--secondary);
+  }
+
+  &__btn {
+    border: 2px solid transparent;
+    width: min(50%, 270px);
+    background-color: var(--secondary);
+    outline-offset: 2px;
+    outline: 2px solid transparent;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus-visible {
+      outline-style: solid;
+    }
+
+    &:focus {
+      outline-color: var(--secondary);
+    }
+
+    &:hover {
+      color: var(--secondary);
+      background-color: transparent;
+      outline-color: transparent;
+    }
+
+    @media (max-width:820px) {
+      width: 60%;
+    }
+
+    @media (max-width:650px) {
+      width: 70%;
+    }
+
+    @media (max-width:480px) {
+      width: 200px;
+    }
+  }
+}

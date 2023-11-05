@@ -1,0 +1,94 @@
+.info {
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  @media (max-width:1050px) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width:480px) {
+    padding-bottom: 30px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width:1050px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width:650px) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 30px 27px 27px 30px;
+    max-width: 430px;
+    min-height: 163px;
+    background-color: var(--light);
+    box-shadow: 0px 0px 30px 0px rgba(226, 226, 226, 0.25);
+
+    @media (max-width:1050px) {
+      flex: 0 0 47%;
+    }
+
+    @media (max-width:820px) {
+      padding: 20px;
+    }
+  }
+
+  &__card-icon {
+    flex-shrink: 0;
+
+    &--flag {
+      margin-right: 25px;
+      width: 71px;
+      height: 71px;
+    }
+
+    &--manager {
+      margin-right: 33px;
+      width: 73px;
+      height: 73px;
+    }
+
+    &--healthcare {
+      margin-right: 26px;
+      width: 70px;
+      height: 70px;
+    }
+
+    @media (max-width:820px) {
+      margin-right: 16px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  &__card-text {
+    max-width: 277px;
+    font-family: "Stolzl-Book", "Stolzl", sans-serif;
+    color: #666;
+
+    @media (max-width:480px) {
+      line-height: 22px;
+    }
+  }
+}

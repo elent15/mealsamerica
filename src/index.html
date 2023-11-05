@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meals America</title>
+  <link rel="preload" href="./fonts/Stolzl-Book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Miniver-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/vendor.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header" style="border: none;">
+      @include('partials/header.html')
+    </header>
+    @include('partials/modal.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/info.html')
+      @include('partials/about.html')
+      @include('partials/why.html')
+      @include('partials/choose.html')
+      @include('partials/banner.html')
+      @include('partials/who.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+</html>
