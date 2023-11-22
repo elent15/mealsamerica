@@ -273,10 +273,6 @@ p {
   display: block;
   font-weight: 700;
   color: var(--primary);
-
-  @media (max-width:820px) {
-    display: inline-block;
-  }
 }
 
 .second-title {

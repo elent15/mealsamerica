@@ -1,3 +1,4 @@
+// селект
 const select = () => {
   const selectInput = document.querySelectorAll('.select__input');
   const selectItem = document.querySelectorAll('.select__item');

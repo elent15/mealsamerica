@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meals America</title>
+  <link rel="preload" href="./fonts/Stolzl-Book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Stolzl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Miniver-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/vendor.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container header__container">
+  <a class="logo-link header__logo-link" href="./index.html">
+    <img class="logo" src="./images/svg/logo.svg" alt="Logo" width="295" height="68">
+  </a>
+  <nav class="nav header__nav">
+    <ul class="list-reset nav__list header__nav-list">
+      <li class="nav__item header__nav-item">
+        <a href="./about.html" class="nav__link header__nav-link">
+          About Us
+        </a>
+      </li>
+      <li class="nav__item header__nav-item">
+        <a href="./how.html" class="nav__link header__nav-link">
+          How It Works
+        </a>
+      </li>
+      <li class="nav__item header__nav-item">
+        <a href="./menu.html" class="nav__link header__nav-link">
+          Menu
+        </a>
+      </li>
+      <li class="nav__item header__nav-item">
+        <a href="./contact.html" class="nav__link header__nav-link">
+          Contact
+        </a>
+      </li>
+    </ul>
+    <button class="btn-reset btn header__btn header__nav-btn" type="button" data-modal="modal-start">
+      Get Started
+    </button>
+  </nav>
+  <button class="btn-reset btn header__btn" type="button" data-modal="modal-start">
+    Get Started
+  </button>
+  <button class="btn-reset burger" type="button" aria-label="Menu">
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+  </button>
+</div>
+
+    </header>
+    <div class="modal" id="modal-start">
+  <div class="modal__bg">
+    <div class="modal__body">
+      <div class="modal__top">
+        <h2 class="second-title modal__title">
+          Get Started
+        </h2>
+        <button class="btn-reset modal__close-btn" type="button">
+          <svg class="modal__close-svg">
+            <use xlink:href="./images/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </div>
+      <form class="form modal__form">
+        <div class="modal__form-block">
+          <label class="form__label modal__form-label">
+            <span class="form__span form__asterisk">
+              Name
+            </span>
+            <input class="form__input modal__form-input" type="text">
+          </label>
+          <label class="form__label modal__form-label">
+            <span class="form__span">
+              E-mail Address
+            </span>
+            <input class="form__input modal__form-input" type="email">
+          </label>
+          <label class="form__label modal__form-label">
+            <span class="form__span form__asterisk">
+              Country
+            </span>
+            <input class="form__input modal__form-input" type="text">
+          </label>
+          <label class="form__label modal__form-label">
+            <span class="form__span form__asterisk">
+              Phone Number
+            </span>
+            <input class="form__input modal__form-input" type="tel">
+          </label>
+        </div>
+        <div class="modal__form-block">
+          <label class="form__label modal__form-label">
+            <span class="form__span">
+              Organization
+            </span>
+            <input class="form__input modal__form-input" type="text">
+          </label>
+          <label class="form__label modal__form-label">
+            <span class="form__span form__asterisk">
+              City
+            </span>
+            <input class="form__input modal__form-input" type="text">
+          </label>
+          <label class="form__label modal__form-label">
+            <span class="form__span form__asterisk">
+              Zip Code
+            </span>
+            <input class="form__input modal__form-input" type="text">
+          </label>
+          <label class="form__label modal__form-label">
+            <span class="form__span form__asterisk">
+              State
+            </span>
+            <input class="form__input modal__form-input" type="text">
+          </label>
+        </div>
+        <div class="modal__form-bottom">
+          <span class="form__span form__asterisk">
+            Tell us about your needs
+          </span>
+          <div class="select" id="modal-select">
+            <button class="btn-reset select__input form__input modal__form-input" type="button">
+              <span class="select__current form__span">
+                —Please choose an option—
+              </span>
+              <svg class="select__arrow">
+                <use xlink:href="./images/sprite.svg#arrow-down"></use>
+              </svg>
+            </button>
+            <div class="select__dropdown">
+              <ul class="list-reset select__list">
+                <li class="select__item" tabindex="0">
+                  I'm a current customer needing assistance
+                </li>
+                <li class="select__item" tabindex="0">
+                  I'm a caregiver or need meals for myself
+                </li>
+                <li class="select__item" tabindex="0">
+                  I'm a case manager needing meals for clients
+                </li>
+                <li class="select__item" tabindex="0">
+                  I represent a healthcare organization needing information for patients
+                </li>
+              </ul>
+            </div>
+          </div>
+          <label class="form__label modal__form-label">
+            <span class="form__span">
+              Provide any additional comments
+            </span>
+            <textarea class="form__input form__input form__textarea modal__form-textarea"></textarea>
+          </label>
+          <button class="btn-reset btn form__btn modal__form-btn btn-js" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <main class="main">
+      <section class="about answers">
+  <div class="container answers__container">
+    <div class="bold-text answers__text">
+      We serve those in need for the long-term meal assistance or anyone who might be in need of a short-term plan while
+      recovering from an injury or illness, or who would simply enjoy healthy meals that requires minimum preparation
+      time.
+    </div>
+    <h3 class="third-title page-third-title answers__title">
+      Answer these few questions to find out if you qualify for Home Delivered Meals by Meals America:
+    </h3>
+    <ul class="list-reset about__list answers__list">
+      <li class="about__item">
+        <svg class="about__item-check-mark">
+          <use xlink:href="./images/sprite.svg#check-mark"></use>
+        </svg>
+        Are you over 65?
+      </li>
+      <li class="about__item">
+        <svg class="about__item-check-mark">
+          <use xlink:href="./images/sprite.svg#check-mark"></use>
+        </svg>
+        Are you disabled or on a short-term disability?
+      </li>
+      <li class="about__item">
+        <svg class="about__item-check-mark">
+          <use xlink:href="./images/sprite.svg#check-mark"></use>
+        </svg>
+        Do you need any assistance with grocery shopping and/or preparing meals?
+      </li>
+    </ul>
+    <div class="bold-text answers__text answers__bold-text">
+      Can you say
+      <span class="answers__primary-span">
+        yes
+      </span>
+      to any of these questions? If so, you might qualify for government or health plan assistance and
+      have our meal delivered to your door at no cost!
+    </div>
+    <div class="info answers__info">
+      <div class="info__card answers__info-card">
+        <svg class="info__card-icon info__card-icon--manager answers__info-card-icon">
+          <use xlink:href="./images/sprite.svg#manager"></use>
+        </svg>
+        <div class="info__card-content answers__info-card-content">
+          <h5 class="fifth-title answers__info-card-title">
+            Information for Case Managers/Coordinators
+          </h5>
+          <p class="text info__card-text answers__info-card-text">
+            If the participant qualifies for home meals delivery – submit authorization for Meals America. We deliver
+            within 2-3 business days from the day you have submitted the authorization. Call us with any questions at
+            <a class="contact-link answers__info-card-link" href="tel:+7866005909">
+              (786) 600-59-09
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="info__card answers__info-card">
+        <svg class="info__card-icon info__card-icon--healthcare answers__info-card-icon">
+          <use xlink:href="./images/sprite.svg#healthcare"></use>
+        </svg>
+        <div class="info__card-content answers__info-card-content">
+          <h5 class="fifth-title answers__info-card-title">
+            Information for Individuals/Caregivers
+          </h5>
+          <p class="text info__card-text answers__info-card-text">
+            If you have a health insurance plan and you may qualify for home meal delivery, contact, your case
+            manager.If you or your loved ones need home delivered meal but don’t qualify through your insurance, please,
+            contact us at
+            <a class="contact-link answers__info-card-link" href="tel:+7866005909">
+              (786) 600-59-09
+            </a>
+            for the options available for private customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="serve">
+  <div class="serve__body">
+    <div class="serve__content">
+      <h3 class="third-title page-third-title serve__title">
+        Who We Serve
+      </h3>
+      <div class="bold-text serve__bold-text">
+        We serve those in need for the long-term meal assistance or anyone who might be in need of a short-term plan
+        while
+        recovering from an injury or illness, or who would simply enjoy healthy meals that requires minimum preparation
+        time.
+      </div>
+      <div class="bg-text serve__text">
+        <p class="serve__paragraph">
+          Meals America is proud to serve and deliver healthy, nutritious meals to your door.
+          All our meals comply with Floridian state requirements. Your first delivery will be at your door within 2-3
+          business days from the day we receive the authorization.
+        </p>
+        <p class="serve__paragraph">
+          Please, let us know your preferences, and we will be
+          happy to modify the menu or customize it to your preference! Please, consider our delicious meals a complete
+          nutrition solution. We are delighted to serve you and your satisfaction is our priority!
+        </p>
+      </div>
+    </div>
+    <div class="serve__img-block">
+      <picture>
+        <source srcset="./images/serve.webp" type="image/webp">
+        <img class="serve__img" src="./images/serve.png" alt="Image" width="494" height="599">
+      </picture>
+    </div>
+  </div>
+</section>
+
+      <section class="about eligibility">
+  <div class="container">
+    <div class="eligibility__content">
+      <h3 class="third-title page-third-title eligibility__title">
+        Eligibility
+      </h3>
+      <div class="bold-text eligibility__bold-text">
+        Find out if you are eligible to have Meals America deliver meals to you each week at NO COST for you!
+      </div>
+      <ul class="list-reset about__list eligibility__list">
+        <li class="about__item eligibility__item">
+          <svg class="about__item-check-mark">
+            <use xlink:href="./images/sprite.svg#check-mark"></use>
+          </svg>
+          Are you on short-term disability?
+        </li>
+        <li class="about__item eligibility__item">
+          <svg class="about__item-check-mark">
+            <use xlink:href="./images/sprite.svg#check-mark"></use>
+          </svg>
+          Are you disabled?
+        </li>
+        <li class="about__item eligibility__item">
+          <svg class="about__item-check-mark">
+            <use xlink:href="./images/sprite.svg#check-mark"></use>
+          </svg>
+          Are you over 65?
+        </li>
+        <li class="about__item eligibility__item">
+          <svg class="about__item-check-mark">
+            <use xlink:href="./images/sprite.svg#check-mark"></use>
+          </svg>
+          Do you have Medicare/Medicaid or ANY other health insurance that offer paid meal option?
+        </li>
+      </ul>
+      <div class="bg-text eligibility__text">
+        <p class="eligibility__paragraph">
+          If you answered “Yes” to any of these questions, you may qualify for Meals America weekly meal delivery plan
+          at NO
+          COST for you!
+        </p>
+        <p class="eligibility__paragraph">
+          If you have any questions call about your eligibility us
+          <a class="contact-link eligibility__link" href="tel:+7866005909">
+            (786) 600-59-09
+          </a>
+          , use our LIVE chat box, or fill out the
+          form below and someone will reach back to you over e-mail within 2 business days.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="waiver">
+  <div class="container waiver__container">
+    <h3 class="third-title page-third-title waiver__title">
+      Aging Waiver
+    </h3>
+    <div class="bold-text waiver__bold-text">
+      We serve those in need for long-term meal assistance or anyone who might be in need of a short-term plan while
+      recovering from an injury or illness, or who would simply enjoy healthy meals that require minimal preparation
+      time.
+    </div>
+    <div class="bg-text waiver__text">
+      <p class="waiver__paragraph">
+        Aging Home and Community-Based Waiver Services may be available to any Florida over 65 to enable them to live in
+        their homes and communities with additional support and services.
+      </p>
+      <p class="waiver__paragraph">
+        Meals America is happy to provide extra information about the waiver and who’s eligible. If you have any
+        questions reach our customer care representative at
+        <a class="contact-link waiver__link" href="tel:+7866005909">
+          (786) 600-59-09
+        </a>
+        , use our LIVE chat box, or fill out the form
+        below and someone will reach back to you over e-mail within 2 business days. We will happily assist you with any
+        questions you have.
+      </p>
+    </div>
+    <h5 class="fifth-title waiver__requirements-list-title">
+      Aging Waiver eligibility requirements:
+    </h5>
+    <ul class="list-reset waiver__list waiver__requirements-list">
+      <li class="waiver__item">
+        Be a resident of Florida
+      </li>
+      <li class="waiver__item">
+        Be a U.S. citizen or a qualified non-citizen
+      </li>
+      <li class="waiver__item">
+        Have a Social Security Number
+      </li>
+      <li class="waiver__item">
+        Be 65 years of age or older
+      </li>
+      <li class="waiver__item">
+        Meet the level of care needs for a Skilled Nursing Facility
+      </li>
+      <li class="waiver__item">
+        Meet the financial requirements by the local county assistance office
+      </li>
+    </ul>
+    <h5 class="fifth-title waiver__services-list-title">
+      Services that Aging Waiver may be available to include:
+    </h5>
+    <div class="waiver__services-list-wrapper">
+      <ul class="list-reset waiver__list waiver__services-list">
+        <li class="waiver__item">
+          Accessibility Adaptations, Equipment, Technology and Medical
+        </li>
+        <li class="waiver__item">
+          Supplies
+        </li>
+        <li class="waiver__item">
+          Adult Daily Living Services
+        </li>
+        <li class="waiver__item">
+          Assistive Technology
+        </li>
+        <li class="waiver__item">
+          Community Transition Services
+        </li>
+        <li class="waiver__item">
+          Home Adaptations
+        </li>
+        <li class="waiver__item">
+          Home Delivered Meals
+        </li>
+        <li class="waiver__item">
+          Home Health Services
+        </li>
+        <li class="waiver__item">
+          Non-Medical Transportation Services
+        </li>
+        <li class="waiver__item">
+          Nutritional Consultation Services
+        </li>
+        <li class="waiver__item">
+          Nursing Services
+        </li>
+      </ul>
+      <ul class="list-reset waiver__list waiver__services-list">
+        <li class="waiver__item">
+          Participant-Directed Community Supports
+        </li>
+        <li class="waiver__item">
+          Participant-Directed Goods and Services
+        </li>
+        <li class="waiver__item">
+          Personal Assistance Services
+        </li>
+        <li class="waiver__item">
+          Personal Emergency Response System (PERS)
+        </li>
+        <li class="waiver__item">
+          Physical Therapy Services
+        </li>
+        <li class="waiver__item">
+          Respite
+        </li>
+        <li class="waiver__item">
+          Service Coordination
+        </li>
+        <li class="waiver__item">
+          Specialized Medical Equipment and Supplies
+        </li>
+        <li class="waiver__item">
+          Speech and Language Therapy Services
+        </li>
+        <li class="waiver__item">
+          TeleCare
+        </li>
+        <li class="waiver__item">
+          Therapeutic and Counseling Services
+        </li>
+      </ul>
+    </div>
+    <div class="bg-text waiver__bottom-text">
+      If you have any questions, contact our Professional and qualified team of health care experts at
+      <a class="contact-link waiver__link" href="tel:+7866005909">
+        (786) 600-59-09
+      </a>
+      to help you determine if you qualify for the FL Aging Waiver.
+    </div>
+  </div>
+</section>
+
+      <section class="how-why">
+  <div class="how-why__body">
+    <div class="how-why__content">
+      <span class="title-span">
+        Who We Serve?
+      </span>
+      <h2 class="second-title how-why__title">
+        Why us?
+      </h2>
+      <div class="how-why__text">
+        <p class="how-why__paragraph">
+          Meals America is determined to provide good meals for those in need and attempt to address the needs of the
+          participants at home on long-term care, post-discharge and those with chronic conditions. We try to help all
+          participants to remain independent and provide the best meal plans and a large menu with many options to
+          choose
+          from to fit any dietary need. We have variety of options from vegetarian to kosher, low-sodium, gluten-free,
+          and
+          many more. Our meals help those with health issues or injuries to make meal preparation easy and safe. We
+          deliver straight to their doorstep each week. The meals get warmed up in the microwave and are ready to be
+          served and enjoyed in minutes!
+        </p>
+        <p class="how-why__paragraph">
+          Please, note that all referrals submitted by case managers and coordinators by 5:00 PM EST by Friday will be
+          delivered the following week. Participant’s first delivery with include items from the first week of our
+          standard menu unless we have special request submitted along with the authorization.
+        </p>
+      </div>
+    </div>
+    <div class="how-why__img-block">
+      <picture>
+        <source srcset="./images/how-why.webp" type="image/webp">
+        <img class="how-why__img" src="./images/how-why.png" alt="Image" width="920" height="500">
+      </picture>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="footer__top">
+    <div class="container footer__top-container">
+      <div class="footer__top-info">
+        <a class="logo-link footer__top-logo-link" href="./index.html">
+          <img class="logo" src="./images/svg/logo.svg" alt="Logo" width="265" height="68">
+        </a>
+        <p class="footer__top-text">
+          All rights resereved
+          <a href="./index.html" class="footer__top-text-link">
+            MealsAmericaFL.com
+          </a>
+          is based in the Florida area and provides home-delivered meals to
+          consumers across ALL sixty seven counties in Florida.
+        </p>
+      </div>
+      <div class="footer__top-contacts">
+        <h4 class="fourth-title">
+          Contact info
+        </h4>
+        <ul class="list-reset footer__top-list">
+          <li class="footer__top-item">
+            <p class="footer__top-link">
+              <svg class="footer__top-link-svg footer__top-link-map">
+                <use xlink:href="./images/sprite.svg#map-pin"></use>
+              </svg>
+              1733 Benbow Ct, Ste 3, Apopka, FL, 32703
+            </p>
+          </li>
+          <li class="footer__top-item">
+            <a href="tel:+7866005909" class="footer__top-link contact-link">
+              <svg class="footer__top-link-svg footer__top-link-phone">
+                <use xlink:href="./images/sprite.svg#phone"></use>
+              </svg>
+              (786) 600-59-09
+            </a>
+          </li>
+          <li class="footer__top-item">
+            <a href="mailto:Support@MealsAmericaFL.com" class="footer__top-link contact-link">
+              <svg class="footer__top-link-svg footer__top-link-envelope">
+                <use xlink:href="./images/sprite.svg#envelope"></use>
+              </svg>
+              Support@MealsAmericaFL.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__top-links">
+        <h4 class="fourth-title">
+          Links
+        </h4>
+        <nav class="nav footer__top-nav">
+          <ul class="list-reset nav__list footer__top-nav-list">
+            <li class="nav__item footer__top-nav-item">
+              <a href="./about.html" class="nav__link footer__top-nav-link">
+                About Us
+              </a>
+            </li>
+            <li class="nav__item footer__top-nav-item">
+              <a href="./how.html" class="nav__link footer__top-nav-link">
+                How it works
+              </a>
+            </li>
+            <li class="nav__item footer__top-nav-item">
+              <a href="./menu.html" class="nav__link footer__top-nav-link">
+                Our menu
+              </a>
+            </li>
+            <li class="nav__item footer__top-nav-item">
+              <a href="./contact.html" class="nav__link footer__top-nav-link">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <div class="container footer__copy-container">
+      <span class="text footer__copy-text">
+        © All rights resereved
+        <a href="./index.html" class="footer__copy-text-link">
+          MealsAmericaFL.com
+        </a>
+      </span>
+    </div>
+  </div>
+  <picture>
+    <source srcset="./images/footer-deco.webp" type="image/webp">
+    <img class="footer__deco" src="./images/footer-deco.png" alt="Decor" width="235" height="304" loading="lazy">
+  </picture>
+</footer>
+
+  </div>
+</body>
+</html>
